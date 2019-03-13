@@ -1,12 +1,19 @@
 {
-  "name": "list-github-public-repositories",
+  "name": "github-api-public-repositories",
   "version": "0.1.0",
-  "private": true,
+  "description": "This application allows to search a user public repositories",
   "dependencies": {
+    "bulma": "0.7.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
   },
+  "authors": [
+    {
+      "name": "Daniela Mondragon Rosas",
+      "email": "danamrosas2@gmail.com"
+    }
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
