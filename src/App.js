@@ -17,7 +17,7 @@ class App extends Component {
     }
 
     _renderResults () {
-        return this.state.results.length === 0 
+        return typeof this.state.results.length === 'undefined'
             ? <p>Sorry!<span role="img" aria-label="Snowman">😞</span>Results not found</p>
             : <Repositories results={this.state.results}/>
         

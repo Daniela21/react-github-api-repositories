@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 export class SearchForm extends Component {
     state = {
         inputUserName: '',
-        userData: ''
+        userData: '',
+        error: null
     }
 
     _handleChange = (e) => {
@@ -13,14 +15,24 @@ export class SearchForm extends Component {
     _handleSubmit = (e) => {
         e.preventDefault()
         const { inputUserName } = this.state
-        fetch(`https://api.github.com/users/${inputUserName}/repos`)
-            .then(response => response.json())
-            .then(results => {
-                const userData = results
+        
+        axios
+            .get(
+                window.encodeURI(
+                    `https://api.github.com/users/${inputUserName}/repos`,
+                ),
+            )
+            .then(response => { 
                 this.setState({
-                    userData: userData
-                  })
+                    userData: response.data
+                })
                 this.props.onResults(this.state.userData)
+            })
+            .catch(error => {
+                this.setState({
+                    error: error.response
+                })
+                this.props.onResults(this.state.error)
             })
     }
 
