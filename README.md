@@ -11,7 +11,7 @@ The requirements needed to run this app are:
 
 ## Installation
 * `git clone git@github.com:Daniela21/react-github-api-repositories.git`
-* `cd github-api`
+* `cd react-github-api-repositories`
 * `npm install`
 * `npm install axios`
 * `npm install bulma` (CSS framework)
