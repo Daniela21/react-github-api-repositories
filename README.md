@@ -13,8 +13,6 @@ The requirements needed to run this app are:
 * `git clone git@github.com:Daniela21/react-github-api-repositories.git`
 * `cd react-github-api-repositories`
 * `npm install`
-* `npm install axios`
-* `npm install bulma` (CSS framework)
 * `npm start` (Runs the app in the development mode).
 * Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
